@@ -3,10 +3,18 @@ var chalk = require("chalk");
 //
 
 var score = 0;
+
+
 var userName = readlineSync.question("Hello! welcome to Ankit's quiz, let's have some fun , Enter any key to continue \n");
 
+
+ var userName = readlineSync.question(chalk.red("What's your name? "));
+
+console.log(chalk.red("Welcome  to the quiz! "+ userName + "    \nLet's see How Much You Know About Ankit?"));
+
 let userAnswer = readlineSync.question(
-"\nDo you know Ankit ? \n");
+"\nDo you want to continue this quiz ? \n");
+
 
 
 if (userAnswer.toLowerCase() === "yes") {
@@ -43,11 +51,6 @@ answer :"Shaktiman"},
 { question :"My favourite cricket player is  \n ",
 answer :"Sachin Tendulkar"}];
 
-function welcomeToTheQuiz() {
- var userName = readlineSync.question(chalk.red("What's your name? "));
-
-  console.log(chalk.red("Welcome  to the quiz! "+ userName + "    \nLet's see How Much You Know About Ankit?"))
-}
 
 
 // play function
@@ -94,7 +97,7 @@ function showScores() {
 }
 }
 
-welcomeToTheQuiz();
+
 game();
 showScores();
 }
